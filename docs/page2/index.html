@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Various maps created for Feed it Forward">
-	<meta property="og:title" content="Codes" />
+	<meta property="og:title" content="Maps for Feed it Forward" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/https://mgaringodev.github.io/myTorontoFeedItForwardMap///codes/" />
+<meta property="og:url" content="/https://mgaringodev.github.io/myTorontoFeedItForwardMap///page2/" />
 <meta property="og:image" content="/https://mgaringodev.github.io/myTorontoFeedItForwardMap//img/home-bg.jpg">
 	
 	
@@ -31,9 +31,9 @@
 
 	<link rel='shortcut icon' type='image/png' href='https://mgaringodev.github.io/myTorontoFeedItForwardMap//favicon.png' />
 
-    <title>Codes - Maps for Feed it Forward</title>
+    <title>Maps for Feed it Forward</title>
 
-    <link rel="canonical" href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//codes/">
+    <link rel="canonical" href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//page2/">
 	
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//css/bootstrap.min.css">
@@ -173,9 +173,9 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading" style="padding: 75px 0">
                        
-                    <h2>Codes</h2>
+                    <h2>Maps for Feed it Forward</h2>
                     <hr class="small">
-                    <h5>This page constists of all the codes assosicated with the project</h5>
+                    <h5>Various maps created for Feed it Forward</h5>
                 </div>
             </div>
         </div>
@@ -186,49 +186,113 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
+            <!-- ***************** Workflow Diagram ***************** -->
 
-<div class="post-preview">
-    <a href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson/">
-        <h4> Wards Geo Json</h4>
-        
-    </a>
-    <p class="post-meta" style="margin-bottom:5px">Posted by Mario Garingo on April 23, 2020</p>
-	<div class="notepad-index-post-tags" style="">
-		<a href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//search/index.html#map" title="Other posts from the Map tag">Map</a>&nbsp;<a href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//search/index.html#jupyter" title="Other posts from the Jupyter tag">Jupyter</a>
-	</div>
+
+
+
+
+
+
+
+
+<!-- ***************** Index Content ***************** -->
+
+
+
+<!-- ***************** Display the Content ***************** -->
+
+<div>
+
+<h1 id="introduction">Introduction</h1>
+<p>This website contains all the things I have done for this project.</p>
+
+<p>I created this for easy archiving and searching.</p>
+
+<h1 id="to-do">To Do</h1>
+<p><strong>Always run makeDocs.py everyday and update the gantt chart</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Look for city DB</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Read in city DB</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Map dummy data on city DB</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Map multiple TimeSliderChoropleth into one map</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Map real data</li>
+</ul>
+
+<h1 id="currently-working-on">Currently Working on</h1>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Map real data</li>
+</ul>
+
+
+
+<h1 id="gantt-chart">Gantt Chart</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.0/mermaid.min.js"></script>
+<div class="mermaid">
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    
+    %% This is the format for each task
+    %% Task Name    : _TOC_, __name__, __date__, __duration__
+
+    section TOC
+    done                      :done,    tocDone,       2020-04-12, 5d
+    active                    :active,    tocActive, after tocDone,      5d
+    crit                      :crit,    tocCrit,       after tocActive, 5d
+    Future                    :tocFuture,       after tocCrit, 5d
+
+    section Coding
+    Look for city DB          :done, c_A, 2020-04-12  , 2d
+    Read in city DB           :done, c_B, after c_A  , 1d
+    Map dummy data on city DB :done, c_C, after c_B, 1d
+    Map multiple TimeSliderChoropleth  :active, c_D, 2020-04-23, 2d
+
+    
 </div>
-<hr>
+ 
 
+<h1 id="workflow">Workflow</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.0/mermaid.min.js"></script>
+<div class="mermaid">
+stateDiagram
+  
+  LitReview --&gt; Code
+  Code --&gt; LitReview
+  Code --&gt; jNotebook 
+  Code --&gt; pyModule
+  jNotebook --&gt; pyModule 
+  pyModule --&gt; jNotebook
+  jNotebook --&gt; roughNotes
+  jNotebook --&gt; Results
 
+  pyModule --&gt;  Documentation : run sphinx
+  roughNotes --&gt; Documentation : run makeDocs
+  Results --&gt; Documentation : run makeDocs
 
-<div class="post-preview">
-    <a href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson-DummyData/">
-        <h4> Wards Geo Json Dummy Data</h4>
-        
-    </a>
-    <p class="post-meta" style="margin-bottom:5px">Posted by Mario Garingo on April 23, 2020</p>
-	<div class="notepad-index-post-tags" style="">
-		<a href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//search/index.html#map" title="Other posts from the Map tag">Map</a>&nbsp;<a href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//search/index.html#jupyter" title="Other posts from the Jupyter tag">Jupyter</a>
-	</div>
+  Documentation --&gt; PDF : run exportToPDF       
 </div>
-<hr>
+ 
 
+<h1 id="daily-workflow">Daily Workflow</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.0/mermaid.min.js"></script>
+<div class="mermaid">
+stateDiagram
+  
+  jNotebook_Markdown --&gt; pyModule
+  jNotebook_Markdown --&gt; notes : makeDocs.py
+  jNotebook_Markdown --&gt; results : makeDocs.py
 
+  notes --&gt; localDocs : makeDocs.py
+  results --&gt; localDocs : makeDocs.py
+  pyModule --&gt; localDocs : run sphinx
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  localDocs --&gt; jekyllServer
+  localDocs --&gt; updateGantt      
+</div>
+ 
+</div>
 
 
 

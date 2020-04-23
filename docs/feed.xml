@@ -5,9 +5,43 @@
     <description>Various maps created for Feed it Forward</description>
     <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//</link>
     <atom:link href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Apr 2020 11:03:04 -0400</pubDate>
-    <lastBuildDate>Thu, 23 Apr 2020 11:03:04 -0400</lastBuildDate>
+    <pubDate>Thu, 23 Apr 2020 16:55:48 -0400</pubDate>
+    <lastBuildDate>Thu, 23 Apr 2020 16:55:48 -0400</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Wards Geo Json</title>
+        <description>
+</description>
+        <pubDate>Thu, 23 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson/</guid>
+        
+        <category>map</category>
+        
+        <category>jupyter</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Wards Geo Json Dummy Data</title>
+        <description>
+</description>
+        <pubDate>Thu, 23 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson-DummyData/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson-DummyData/</guid>
+        
+        <category>map</category>
+        
+        <category>jupyter</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
     
       <item>
         <title>Jekyll Site Creation</title>
@@ -453,65 +487,6 @@ The live editor can be found here.  Just copy paste the content in the mermaid l
         <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
         <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingFlowCharts/</link>
         <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingFlowCharts/</guid>
-        
-        <category>docs</category>
-        
-        
-        <category>project1</category>
-        
-      </item>
-    
-      <item>
-        <title>Acknowledgements</title>
-        <description>
-
-
-
-      Table of Contents
-
-  Base Theme
-  Additions
-
-
-    
-
-
-
-
-Base Theme
-
-  project-pages
-
-
-Additions
-
-  Copying Code Snippets
-    
-      marcoaugustoandrade
-    
-  
-  No Print Divs
-    
-      stackOverflow
-    
-  
-  Mermaid Flow chart
-    
-      jasonbellamy
-    
-  
-  Export to PDF
-    
-      YouTube Video Wkhtmltopdf Installation 
-      PDFKIT Documentation
-      Walk through directory
-    
-  
-
-</description>
-        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
-        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/Acknowledgements/</link>
-        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/Acknowledgements/</guid>
         
         <category>docs</category>
         

@@ -43,6 +43,16 @@ callback([
   {
     "text": "Jekyll Site Creation",
     "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/22/CreatingSite/"
+  } ,
+
+  {
+    "text": "Wards Geo Json Dummy Data",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson-DummyData/"
+  } ,
+
+  {
+    "text": "Wards Geo Json",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson/"
   } 
 
 ])

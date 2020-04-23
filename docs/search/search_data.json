@@ -1,6 +1,26 @@
 {
   
 
+    "project1-2020-04-23-mywardsgeojson": {
+      "title": "Wards Geo Json",
+      "content"	 : "",
+      "url": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
+    "project1-2020-04-23-mywardsgeojson-dummydata": {
+      "title": "Wards Geo Json Dummy Data",
+      "content"	 : "",
+      "url": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/23/myWardsGeoJson-DummyData/",
+      "author": "Mario Garingo",
+      "categories": "project1"
+    }
+    ,
+  
+
     "project1-2020-04-22-creatingsite": {
       "title": "Jekyll Site Creation",
       "content"	 : "Run the following code in the command line.jekyll build --config &quot;_configPublish.yml&quot;NOTE: When running this the first time you need to change the _configPublish.yml file  destination: change the project folder in github folder.  baseurl: change the project page github pages website location.",
@@ -91,6 +111,8 @@
     
   
 
+  
+    
   
     
   
