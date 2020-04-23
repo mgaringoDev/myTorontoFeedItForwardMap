@@ -1,0 +1,48 @@
+callback([
+
+  {
+    "text": "Acknowledgements",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/Acknowledgements/"
+  } ,
+
+  {
+    "text": "Adding Flow Charts",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingFlowCharts/"
+  } ,
+
+  {
+    "text": "Adding Images from gDrive",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingImagesFromGDrive/"
+  } ,
+
+  {
+    "text": "Code Front Matter",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/CodeFrontMatter/"
+  } ,
+
+  {
+    "text": "PDF Doc Sheets Front Matter",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/PDFDocSheetsFrontMatter/"
+  } ,
+
+  {
+    "text": "Page Front Matter",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/PageFrontMatter/"
+  } ,
+
+  {
+    "text": "Export Project to PDF",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/21/ExportToPDF/"
+  } ,
+
+  {
+    "text": "Licensing Template",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/21/Licensing/"
+  } ,
+
+  {
+    "text": "Jekyll Site Creation",
+    "href": "https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/22/CreatingSite/"
+  } 
+
+])

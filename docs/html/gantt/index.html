@@ -1,0 +1,37 @@
+
+
+<div>
+
+<h1 id="gantt-chart">Gantt Chart</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.0/mermaid.min.js"></script>
+<div class="mermaid">
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    
+    %% This is the format for each task
+    %% Task Name    : _TOC_, __name__, __date__, __duration__
+
+    section TOC
+    done                      :done,    tocDone,       2014-01-06, 5d
+    active                    :active,    tocActive, after tocDone,      5d
+    crit                      :crit,    tocCrit,       after tocActive, 5d
+    Future                    :tocFuture,       after tocCrit, 5d
+
+    section Lit Review
+    Reading                   :reading, 2014-01-06, 5d
+        
+    section Coding
+    Code task 1               :c_A, after reading  , 5d
+    Code task 2               :c_B, after c_A, 5d
+
+    section Documentation
+    Doc task 1                :d_A, after c_B  , 31d
+    Doc task 2                :d_B, after d_A, 24d
+
+    section Reporting
+    Report task 1             :r_A, after d_A  , 6d
+    Report task 2             :r_B, after d_B, 6d      
+</div>
+
+</div>

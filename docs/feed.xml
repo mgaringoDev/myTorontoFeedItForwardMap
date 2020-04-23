@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maps for Feed it Forward</title>
+    <description>Various maps created for Feed it Forward</description>
+    <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//</link>
+    <atom:link href="https://mgaringodev.github.io/myTorontoFeedItForwardMap//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 23 Apr 2020 11:03:04 -0400</pubDate>
+    <lastBuildDate>Thu, 23 Apr 2020 11:03:04 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Jekyll Site Creation</title>
+        <description>Run the following code in the command line.
+
+jekyll build --config &quot;_configPublish.yml&quot;
+
+
+NOTE: When running this the first time you need to change the _configPublish.yml file
+
+  destination: change the project folder in github folder.
+  baseurl: change the project page github pages website location.
+
+</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/22/CreatingSite/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/22/CreatingSite/</guid>
+        
+        <category>addNew</category>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Licensing Template</title>
+        <description>You need to add the following licensing and copyright statement at the top of all codes.
+
+Copyright (C) yyyy  Mario Garingo
+mg.mydev@gmail.com
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+</description>
+        <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/21/Licensing/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/21/Licensing/</guid>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Export Project to PDF</title>
+        <description>You can export all the notes located in the *_site\project1* directory.  To do so go to the parent directory of the project.  There should only be 4 files:
+
+
+  _PDF: Location of the resultant pdf files.
+  git_projectCodes: Location of the codes to be backed up by github
+  local_projectNotes: Local directory of the notes
+  exportToPDF.py: A python file to create the pdf files.
+
+
+Once in this directory, open a terminal and activate any python 3 environment.  Then run the exportToPDF.py file with the command:
+
+python exportToPDF.py
+
+
+This will run the code:
+
+import os,sys
+from glob import glob
+import pdfkit
+from tqdm import tqdm
+
+
+def getHTMLFiles(searchDirectiory):
+    result = [y for x in os.walk(searchDirectiory) for y in glob(os.path.join(x[0], '*.html'))]
+    return result
+
+def main():
+	# I/O
+	cwd = os.getcwd()
+	pagesLocation = cwd + '\\local_projectNotes\\_site\\project1\\' 
+	pdfOutDir = cwd+'\\_PDF\\'
+
+	# Get all HTML Files
+	htmlFiles = getHTMLFiles(pagesLocation)
+
+	# Loop through and generate all the PDF Files
+	for htmlFile in tqdm(htmlFiles):	    
+	    pdfFileName = htmlFile.split('\\')[-2]+'.pdf'
+	    pdfkit.from_file(htmlFile,pdfOutDir+pdfFileName)  
+	    os.system( 'cls' )
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+    print('Finished publishing notes in PDF')
+
+
+</description>
+        <pubDate>Tue, 21 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/21/ExportToPDF/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/21/ExportToPDF/</guid>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Page Front Matter</title>
+        <description>
+
+
+
+      Table of Contents
+
+  General Front Matter    
+      Variations        
+          Note Type
+          Documentation Type
+          Reporting Type
+        
+      
+    
+  
+  Adding Table of Contents
+  Adding both Front Matter and Table of Contents
+
+
+    
+
+
+
+
+General Front Matter
+Copy paste the following in the front matter of the new note.
+
+---
+layout:     myPage
+title:      myTest
+author:     Mario Garingo
+tags: 		mytag 
+description:  Description of the note
+category:  project1
+type: notes
+---
+
+
+Variations
+You can change the type of note by changing the type in the front matter.  Currently you can add only notes, documentation, and reporting.  The code section is automatically genearted by a python code.
+
+Note Type
+type: notes
+
+
+Documentation Type
+type: documentation
+
+
+Reporting Type
+type: reporting
+
+
+Adding Table of Contents
+If you want to add a table of conents which you probably do then you need to add the follow code after the front matter.
+
+&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;
+&amp;lt;div class=&quot;float-left scrollbar&quot; id=&quot;style-2&quot; style=&quot;overflow:scroll;height: 45%;width:20%;background-color: black;&quot;&amp;gt;
+&amp;lt;div class=&quot;recentpost&quot; style=&quot;padding: 10px; font-size: small;background-color: black;&quot;&amp;gt;
+&amp;lt;div class=&quot;customTOC&quot; id=&quot;inline_toc&quot; markdown=&quot;1&quot; style=&quot;color:white&quot;&amp;gt;
+&amp;lt;h4 style=&quot;color: white;&quot;&amp;gt;Table of Contents&amp;lt;/h4&amp;gt;
+* TOC
+{:toc}
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;
+
+
+Adding both Front Matter and Table of Contents
+If you want both just copy the following:
+---
+layout:     myPage
+title:      myTest
+author:     Mario Garingo
+tags: 		mytag  
+description:  Description of the note
+category:  project1
+type: notes
+---
+
+&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;
+&amp;lt;div class=&quot;float-left scrollbar&quot; id=&quot;style-2&quot; style=&quot;overflow:scroll;height: 45%;width:20%;background-color: black;&quot;&amp;gt;
+&amp;lt;div class=&quot;recentpost&quot; style=&quot;padding: 10px; font-size: small;background-color: black;&quot;&amp;gt;
+&amp;lt;div class=&quot;customTOC&quot; id=&quot;inline_toc&quot; markdown=&quot;1&quot; style=&quot;color:white&quot;&amp;gt;
+&amp;lt;h4 style=&quot;color: white;&quot;&amp;gt;Table of Contents&amp;lt;/h4&amp;gt;
+* TOC
+{:toc}
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- *********************************** Table of Contents *********************************** --&amp;gt;
+
+
+Note: Don’t forget to change the type of note.
+
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/PageFrontMatter/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/PageFrontMatter/</guid>
+        
+        <category>addNew</category>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>PDF Doc Sheets Front Matter</title>
+        <description>
+
+
+
+      Table of Contents
+
+  General Front Matter    
+      Files From gDrive        
+          Adding gDrive PDF Files
+          Adding gDrive Sheet Files
+          Adding gDrive Sheet Files
+          Adding gDrive Slides Files
+        
+      
+      Files From The Web
+    
+  
+
+
+    
+
+
+
+
+General Front Matter
+
+Files From gDrive
+
+If you want to add gDoc, gSheet or PDF from google drive add the following parameters in the front matter.
+
+Copy paste the following in the front matter of the new note.  Note that the random collection of numbers and letters are the sharable id of the document you are trying to link.
+
+Adding gDrive PDF Files
+
+gDrivePDFile: 1KKTAUuj8OlM03U922KJL1ZTTSuMBTK4X
+
+
+Adding gDrive Sheet Files
+
+gDriveSheets: 1WnGloeNUhf__Um0i1kSsqVUA3ZwF56yr68R4_UQyiE8
+
+
+Adding gDrive Sheet Files
+
+gDriveDoc: 1iPIAVzNSf8uNbhaV56lVvxd_2lOWVywTXuGFCPPJJ9s
+
+
+Adding gDrive Slides Files
+
+gDriveSlide: 1cQyCiFMB48_0RAl83ErkJVGJe6VwIUiP5t3pIPH-nH8
+
+
+Files From The Web
+
+These should be the direct link to the PDF.  I don’t advise this because sometimes the PDF just disappears.  The best thing to do is download them, place them in the mfDev gDrive account and link them according to the above ways of adding them on the page.
+pdfFile: http://youeeg.net/_siteMigraineProject/assets/pdf/conferences/CSCI2017/CSCI2017Presentation.pdf
+
+
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/PDFDocSheetsFrontMatter/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/PDFDocSheetsFrontMatter/</guid>
+        
+        <category>addNew</category>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Code Front Matter</title>
+        <description>This is done automatically via a python script but the front matter should be
+
+---
+layout:     myNotebookTemp
+title:      NoteBook Title
+author:     Mario Garingo
+tags:      jupyter
+description:     Need to add description.
+category:     project1
+type:     codes
+notebookfilename:     NameOfTheJSONOrJupyterNotebookLocatedIn_Data
+---
+
+
+Adding custom cells for front matter
+To make this work make sure that in the jupyter notebook the fist cell is changed so that the metadata has an attribute “cellType” with the value of “FrontMatter”.
+
+In jupyter notebook edit cell metadata by going to view-&amp;gt;edit metadata
+
+{ &quot;cellType&quot;: &quot;FrontMatter&quot; }
+
+
+This will be taken into account in the myNotebookTemp.html template and be removed when showing the jupyter notebook.
+
+Then remove cell tool bar after this is completed
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/CodeFrontMatter/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/CodeFrontMatter/</guid>
+        
+        <category>addNew</category>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Adding Images from gDrive</title>
+        <description>Adding Images
+Essentially do the follow:
+
+
+  Copy sharable link
+    
+      EX: https://drive.google.com/file/d/1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd/view?usp=sharing
+    
+  
+  Remove everything after the file ID
+    
+      EX: https://drive.google.com/file/d/1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd
+    
+  
+  Replace /file/d/ with uc?id=
+    
+      EX: https://drive.google.com/uc?id=1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd
+    
+  
+  Copy paste this new file onto the website you want this image to be used
+
+
+![](https://drive.google.com/uc?id=___IMG_ID____)
+
+Follow this tutorial
+
+Alternative Using Liquid
+
+{% assign gID = '1UifH9c8DGBMWa-UKmMAsOJx1uBzVb9Yd' %}{% include addGImg %}
+
+
+Changing Image Size
+To change the dimension of the image add {:height=”HEIGHTpx” width=”WIDTHpx”} to the end of the tag.  Note that this is for “kramdom”
+
+![](https://drive.google.com/uc?id=___IMG_ID____ ={:height=&quot;36px&quot; width=&quot;36px&quot;})
+
+
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingImagesFromGDrive/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingImagesFromGDrive/</guid>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Adding Flow Charts</title>
+        <description>To add mermaid flow charts all you have to do is place the following set of liquid code in your md file.
+
+{% mermaid %}
+
+{% endmermaid %}
+
+
+Then place your mermaid graph in between the liquid code and it will render a flow chart automatically.  An example diagram can be seen below with the graph.
+
+graph LR
+    A[Hard edge] --&amp;gt;|Link text| B(Round edge)
+    B --&amp;gt; C{Decision}
+    C --&amp;gt;|One| D[Result one]
+    C --&amp;gt;|Two| E[Result two]
+
+
+
+
+graph LR
+    A[Hard edge] --&amp;gt;|Link text| B(Round edge)
+    B --&amp;gt; C{Decision}
+    C --&amp;gt;|One| D[Result one]
+    C --&amp;gt;|Two| E[Result two]
+
+
+Types of Charts
+There are several charts you can create using mermaid.
+
+  Flowchart
+  Sequence Diagrams
+  Class Diagrams
+  State Diagram
+  Entity Relationship Diagrams
+  Gantt
+  Pie Chart
+
+
+Live Editor
+The live editor can be found here.  Just copy paste the content in the mermaid liquid tags.
+
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingFlowCharts/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/AddingFlowCharts/</guid>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>Acknowledgements</title>
+        <description>
+
+
+
+      Table of Contents
+
+  Base Theme
+  Additions
+
+
+    
+
+
+
+
+Base Theme
+
+  project-pages
+
+
+Additions
+
+  Copying Code Snippets
+    
+      marcoaugustoandrade
+    
+  
+  No Print Divs
+    
+      stackOverflow
+    
+  
+  Mermaid Flow chart
+    
+      jasonbellamy
+    
+  
+  Export to PDF
+    
+      YouTube Video Wkhtmltopdf Installation 
+      PDFKIT Documentation
+      Walk through directory
+    
+  
+
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/Acknowledgements/</link>
+        <guid isPermaLink="true">https://mgaringodev.github.io/myTorontoFeedItForwardMap//project1/2020/04/20/Acknowledgements/</guid>
+        
+        <category>docs</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+  </channel>
+</rss>
